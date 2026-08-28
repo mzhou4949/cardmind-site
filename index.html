@@ -3,34 +3,140 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CardMind AI — Support</title>
-<style>
-  :root { --bg:#F5F7FF; --surface:#fff; --text:#0F1021; --muted:#6B6E90; --accent:#4F46E5; --border:rgba(99,102,241,.14); }
-  @media (prefers-color-scheme: dark) { :root { --bg:#080B12; --surface:#0F1220; --text:#E8EAF4; --muted:#8A8DAF; --accent:#818CF8; --border:rgba(99,102,241,.2); } }
-  body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system, "Segoe UI", Roboto, sans-serif; line-height:1.65; }
-  main { max-width:720px; margin:0 auto; padding:64px 24px 80px; }
-  .brand { font-weight:800; color:var(--accent); font-size:14px; text-transform:uppercase; letter-spacing:.04em; }
-  h1 { font-size:34px; margin:8px 0 12px; letter-spacing:-.02em; }
-  p { font-size:17px; color:var(--muted); }
-  .card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:20px 22px; margin-top:28px; }
-  .card h2 { margin:0 0 6px; font-size:18px; }
-  .card p { margin:0; font-size:15px; }
-  a { color:var(--accent); }
-</style>
+<title>CardMind AI — Support Center</title>
+<meta name="description" content="Help, FAQs, troubleshooting, and contact for CardMind AI — the business-card scanner and personal CRM.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">C</span>CardMind AI</a>
+    <nav class="nav-links" aria-label="Site">
+      <a href="index.html" aria-current="page">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="terms.html">Terms</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-  <div class="brand">CardMind AI</div>
-  <h1>Scan a card. Remember the person.</h1>
-  <p>CardMind turns business cards into a living personal CRM — auto-scan, AI-extracted details, follow-up tasks, and an assistant that knows your whole network.</p>
-  <div class="card">
-    <h2>Support</h2>
-    <p>Questions, bugs, or feature requests: <a href="mailto:mzhou6213@gmail.com">mzhou6213@gmail.com</a>. We typically reply within a day.</p>
+  <section class="hero">
+    <div class="eyebrow">Support Center</div>
+    <h1>Scan a card. Remember the person.</h1>
+    <p class="lede">CardMind turns business cards into a living personal CRM — auto-scan, AI-extracted details, follow-up tasks, and an assistant that knows your whole network. This page covers how it works, answers to common questions, and how to reach us.</p>
+    <div class="hero-actions">
+      <a class="btn" href="mailto:mzhou6213@gmail.com?subject=CardMind%20support">Contact support</a>
+      <span class="quiet">We typically reply within one business day.</span>
+    </div>
+  </section>
+
+  <h2 id="how-it-works">How CardMind works</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1 · Scan</h3>
+      <p>Tap the shutter and the auto-scanner finds the card, snaps when it's steady, and straightens it. Add the back of the card for extra details, or use Event Mode to capture a whole stack in one session.</p>
+    </div>
+    <div class="card">
+      <h3>2 · Review</h3>
+      <p>AI extracts name, title, company, email, phone, website, location, and a one-line summary. Check the details, add where you met, and save. Duplicate cards are detected and offered for merging.</p>
+    </div>
+    <div class="card">
+      <h3>3 · Remember</h3>
+      <p>Every profile has a Notes section for the things cards don't say, plus Tasks — a catch-up call, a thank-you email — with or without a date. Dated tasks notify you.</p>
+    </div>
+    <div class="card">
+      <h3>4 · Ask</h3>
+      <p>The assistant knows your entire contact list. Ask who you know at a company, who you met in a city, or tell it to add something to someone's notes. Ask it to look a contact up online and it proposes updates you approve with a tap.</p>
+    </div>
   </div>
+
+  <h2 id="faq">Frequently asked questions</h2>
   <div class="card">
-    <h2>Privacy</h2>
-    <p>How your data is handled, including AI processing and account deletion: <a href="privacy.html">Privacy Policy</a>.</p>
+    <details>
+      <summary>What kinds of cards can I scan?</summary>
+      <p>Any printed business card, in any language the card is printed in. Plain paper cards work best; very glossy or dark cards benefit from softer lighting. You can also import a photo of a card from your library — you'll get a chance to crop it first.</p>
+    </details>
+    <details>
+      <summary>The extracted details are wrong or incomplete. What can I do?</summary>
+      <p>Extraction is done by AI and is very accurate on clear photos, but always review before saving. On the review screen you can correct any field. If the front of the card is missing information that's on the back, tap <strong>Add Back of Card</strong> — both sides are read together. After saving, tap any field on the profile to edit it in place.</p>
+    </details>
+    <details>
+      <summary>How does Event Mode work?</summary>
+      <p>Turn on <strong>Event Mode</strong> on the Scan tab, then capture card after card. Each one starts processing the moment it's captured — you'll see a spinner turn into a green check on its thumbnail. When you're done, tap <strong>Save All</strong> and every card becomes a contact. If any card fails (a blurry shot, a network drop) it stays in the queue so you can retry just that one.</p>
+    </details>
+    <details>
+      <summary>What can the AI assistant actually do?</summary>
+      <ul>
+        <li><strong>Answer</strong> — "Who do I know in finance?" "Where did I meet Sarah?"</li>
+        <li><strong>Show</strong> — "Display everyone in France" returns tappable profiles.</li>
+        <li><strong>Record</strong> — "Add to notes that John has a daughter" saves it to John's profile and confirms.</li>
+        <li><strong>Research</strong> — "Look up Sarah Chen online" searches the public web and proposes contact updates with sources; nothing is saved until you tap <em>Save to contact</em>.</li>
+        <li><strong>Draft</strong> — "Write a short follow-up to Michael."</li>
+      </ul>
+      <p>Your conversation is saved so you can pick up where you left off; the compose icon starts a fresh one.</p>
+    </details>
+    <details>
+      <summary>Does the AI see my contacts? Is my data used to train models?</summary>
+      <p>To answer questions about your network, the assistant is given your own contacts and tasks for that request only — the same data you already see in the app. Card photos are sent for extraction. We use Anthropic's Claude API; under Anthropic's commercial terms, API inputs and outputs are not used to train their models. See our <a href="privacy.html#ai">Privacy Policy</a> for details.</p>
+    </details>
+    <details>
+      <summary>Are there usage limits?</summary>
+      <p>Yes — each account has a monthly allowance of card scans, assistant messages, and web-research requests so we can keep the service fast and affordable. If you hit a limit, the app tells you and it resets at the start of the next month. During the beta, CardMind is free.</p>
+    </details>
+    <details>
+      <summary>Can I export my contacts?</summary>
+      <p>Yes. <strong>Settings → Export All Contacts</strong> shares a CSV of everything. From any profile, the share icon exports that one person as text or a vCard.</p>
+    </details>
+    <details>
+      <summary>How do I delete my account?</summary>
+      <p><strong>Settings → Delete Account</strong>. After you confirm, your account and every piece of data tied to it — contacts, card photos, folders, tasks, chat history, usage records — are permanently removed. This cannot be undone, so export first if you want a copy.</p>
+    </details>
+    <details>
+      <summary>Which devices are supported?</summary>
+      <p>iPhone running a current version of iOS. Auto-scan uses Apple's built-in document scanner. iPad and Android are on the roadmap.</p>
+    </details>
   </div>
+
+  <h2 id="troubleshooting">Troubleshooting</h2>
+  <div class="card">
+    <details>
+      <summary>The scanner won't open or the camera view is black</summary>
+      <p>CardMind needs camera permission. Open the iPhone <strong>Settings</strong> app → scroll to <strong>CardMind</strong> → turn on <strong>Camera</strong>. Photo library access is needed only if you import existing photos.</p>
+    </details>
+    <details>
+      <summary>Task notifications aren't arriving</summary>
+      <p>Notifications need permission: iPhone <strong>Settings → CardMind → Notifications → Allow</strong>. Only tasks with a date send a notification, at the time you chose (9:00 in the morning for calendar-picked dates). Tasks without a date wait quietly in your list.</p>
+    </details>
+    <details>
+      <summary>I can't sign in / I forgot my password</summary>
+      <p>On the sign-in screen tap <strong>Forgot password?</strong>, enter your email, and open the link in the email on your phone — it brings you straight back to CardMind to set a new password. If you signed up with Apple, use the <strong>Sign in with Apple</strong> button instead of a password.</p>
+    </details>
+    <details>
+      <summary>"Extraction failed" or "Monthly limit reached"</summary>
+      <p><em>Extraction failed</em> is usually a connection hiccup or a photo the AI couldn't read — retake with the card filling the frame. <em>Monthly limit reached</em> means you've used this month's allowance; it resets on the 1st. Contact us if you need more.</p>
+    </details>
+    <details>
+      <summary>Something else is broken</summary>
+      <p>Email us with what you were doing, what you expected, and what happened instead. A screenshot helps enormously. Include your app version from Settings if you can.</p>
+    </details>
+  </div>
+
+  <h2 id="contact">Contact</h2>
+  <div class="callout">
+    <p><strong>Email:</strong> <a href="mailto:mzhou6213@gmail.com">mzhou6213@gmail.com</a> — support, feature requests, privacy requests, and partnership inquiries all go here. We typically reply within one business day.</p>
+  </div>
+
+  <h2 id="legal">Legal</h2>
+  <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
 </main>
+
+<footer>
+  <div class="footer-inner">
+    <span>© 2026 CardMind AI. All rights reserved.</span>
+    <span><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="mailto:mzhou6213@gmail.com">Contact</a></span>
+  </div>
+</footer>
 </body>
 </html>
